@@ -26,48 +26,45 @@ interface PricingProps {
 
 const pricingList: PricingProps[] = [
   {
-    title: "Free",
+    title: "Project Consultation",
     popular: 0,
     price: 0,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get Started",
+    description: "Start with a free project review and lighting specification session.",
+    buttonText: "Book Consultation",
     benefitList: [
-      "1 Team member",
-      "2 GB Storage",
-      "Upto 4 pages",
-      "Community support",
-      "lorem ipsum dolor",
+      "Lighting needs assessment",
+      "Initial fixture recommendations",
+      "Budget-friendly options",
+      "Delivery timeline overview",
+      "Expert support",
     ],
   },
   {
-    title: "Premium",
+    title: "Design & Supply",
     popular: 1,
-    price: 5,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
+    price: 0,
+    description: "Complete design support with premium LED fixtures for homes and businesses.",
+    buttonText: "Request Quote",
     benefitList: [
-      "4 Team member",
-      "4 GB Storage",
-      "Upto 6 pages",
-      "Priority support",
-      "lorem ipsum dolor",
+      "Custom lighting layouts",
+      "Premium product selection",
+      "Smart control integration",
+      "Fast delivery",
+      "Warranty coverage",
     ],
   },
   {
-    title: "Enterprise",
+    title: "Commercial Projects",
     popular: 0,
-    price: 40,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+    price: 0,
+    description: "Scalable solution packages for offices, hotels, retail and industrial sites.",
+    buttonText: "Contact Sales",
     benefitList: [
-      "10 Team member",
-      "8 GB Storage",
-      "Upto 10 pages",
-      "Priority support",
-      "lorem ipsum dolor",
+      "Bulk pricing",
+      "Site-ready specifications",
+      "Dedicated account manager",
+      "Ongoing maintenance support",
+      "Extended warranty options",
     ],
   },
 ];
@@ -79,16 +76,10 @@ export const Pricing = () => {
       className="container py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center">
-        Get
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          {" "}
-          Unlimited{" "}
-        </span>
-        Access
+        LED Solutions Built for Every Project
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-        reiciendis.
+        Choose the right service package for residential, hospitality, retail, and industrial needs.
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pricingList.map((pricing: PricingProps) => (
@@ -96,7 +87,7 @@ export const Pricing = () => {
             key={pricing.title}
             className={
               pricing.popular === PopularPlanType.YES
-                ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10"
+                ? "drop-shadow-xl shadow-black/10"
                 : ""
             }
           >
@@ -112,11 +103,6 @@ export const Pricing = () => {
                   </Badge>
                 ) : null}
               </CardTitle>
-              <div>
-                <span className="text-3xl font-bold">${pricing.price}</span>
-                <span className="text-muted-foreground"> /month</span>
-              </div>
-
               <CardDescription>{pricing.description}</CardDescription>
             </CardHeader>
 
@@ -133,7 +119,7 @@ export const Pricing = () => {
                     key={benefit}
                     className="flex"
                   >
-                    <Check className="text-green-500" />{" "}
+                    <Check className="text-green-500" />{' '}
                     <h3 className="ml-2">{benefit}</h3>
                   </span>
                 ))}

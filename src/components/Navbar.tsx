@@ -24,43 +24,27 @@ interface RouteProps {
 }
 
 const routeList: RouteProps[] = [
-  {
-    href: "#features",
-    label: "Features",
-  },
-  {
-    href: "#testimonials",
-    label: "Testimonials",
-  },
-  {
-    href: "#pricing",
-    label: "Pricing",
-  },
-  {
-    href: "#faq",
-    label: "FAQ",
-  },
+  { href: "#products", label: "Products" },
+  { href: "#projects", label: "Projects" },
+  { href: "#about", label: "About Us" },
+  { href: "#faq", label: "FAQ" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
+    <header className="sticky border-b-[1px] top-0 z-40 w-full bg-background/95 backdrop-blur-xl dark:border-b-slate-700">
       <NavigationMenu className="mx-auto">
-        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
+        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between items-center">
           <NavigationMenuItem className="font-bold flex">
-            <a
-              rel="noreferrer noopener"
-              href="/"
-              className="ml-2 font-bold text-xl flex"
-            >
+            <a rel="noreferrer noopener" href="/" className="ml-2 font-bold text-xl flex items-center gap-2 text-foreground">
               <LogoIcon />
-              ShadcnUI/React
+              Lighting
             </a>
           </NavigationMenuItem>
 
-          {/* mobile */}
-          <span className="flex md:hidden">
+          <span className="flex md:hidden items-center gap-2">
             <ModeToggle />
 
             <Sheet
@@ -68,19 +52,12 @@ export const Navbar = () => {
               onOpenChange={setIsOpen}
             >
               <SheetTrigger className="px-2">
-                <Menu
-                  className="flex md:hidden h-5 w-5"
-                  onClick={() => setIsOpen(true)}
-                >
-                  <span className="sr-only">Menu Icon</span>
-                </Menu>
+                <Menu className="h-5 w-5" />
               </SheetTrigger>
 
               <SheetContent side={"left"}>
                 <SheetHeader>
-                  <SheetTitle className="font-bold text-xl">
-                    Shadcn/React
-                  </SheetTitle>
+                  <SheetTitle className="font-bold text-xl">Lighting</SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
                   {routeList.map(({ href, label }: RouteProps) => (
@@ -96,47 +73,32 @@ export const Navbar = () => {
                   ))}
                   <a
                     rel="noreferrer noopener"
-                    href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-                    target="_blank"
-                    className={`w-[110px] border ${buttonVariants({
-                      variant: "secondary",
-                    })}`}
+                    href="#contact"
+                    className={`${buttonVariants({ variant: "secondary" })} w-[140px] text-center`}
                   >
-                    <GitHubLogoIcon className="mr-2 w-5 h-5" />
-                    Github
+                    Request Quote
                   </a>
                 </nav>
               </SheetContent>
             </Sheet>
           </span>
 
-          {/* desktop */}
           <nav className="hidden md:flex gap-2">
             {routeList.map((route: RouteProps, i) => (
-              <a
-                rel="noreferrer noopener"
-                href={route.href}
-                key={i}
-                className={`text-[17px] ${buttonVariants({
-                  variant: "ghost",
-                })}`}
-              >
+              <a rel="noreferrer noopener" href={route.href} key={i} className={`text-[17px] ${buttonVariants({ variant: "ghost" })}`}>
                 {route.label}
               </a>
             ))}
           </nav>
 
-          <div className="hidden md:flex gap-2">
+          <div className="hidden md:flex gap-2 items-center">
             <a
               rel="noreferrer noopener"
-              href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-              target="_blank"
+              href="#contact"
               className={`border ${buttonVariants({ variant: "secondary" })}`}
             >
-              <GitHubLogoIcon className="mr-2 w-5 h-5" />
-              Github
+              Request Quote
             </a>
-
             <ModeToggle />
           </div>
         </NavigationMenuList>

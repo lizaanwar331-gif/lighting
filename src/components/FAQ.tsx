@@ -13,34 +13,50 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free ChadcnUI template.",
+    question: "Do you offer commercial warranties on products?",
+    answer:
+      "Yes — we provide manufacturer warranties and optional extended coverage for commercial projects.",
     value: "item-1",
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    question: "Can your LEDs be integrated with smart home systems?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "Many of our products support popular smart platforms and DMX/BMS integrations for commercial sites.",
     value: "item-2",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet  Consectetur natus dolores minus quibusdam?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis necessitatibus maxime quis ipsa vitae cumque quo?",
+    question: "What is the expected lifespan of your fixtures?",
+    answer: "Most products are rated 30,000–50,000 hours depending on model and usage.",
     value: "item-3",
   },
   {
-    question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    question: "Do you provide custom lighting design services?",
+    answer:
+      "Yes — we offer design, photometric planning and custom fixture options for large projects.",
     value: "item-4",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur natus?",
+    question: "What are your lead times for bulk orders?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "Typical lead times range from 1–4 weeks depending on product and order size; expedited options are available.",
     value: "item-5",
+  },
+  {
+    question: "Are your products energy certified?",
+    answer: "Yes — many items are ENERGY STAR and CE certified; specifications are available per product.",
+    value: "item-6",
+  },
+  {
+    question: "Do you offer on-site installation or contractor referrals?",
+    answer:
+      "We partner with certified installers and can recommend local contractors for your project.",
+    value: "item-7",
+  },
+  {
+    question: "How do I request a quote for my project?",
+    answer:
+      "Use the 'Request a Quote' button or contact our sales team via phone or WhatsApp with project details.",
+    value: "item-8",
   },
 ];
 

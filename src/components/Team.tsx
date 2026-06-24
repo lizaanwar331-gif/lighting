@@ -114,14 +114,12 @@ export const Team = () => {
     >
       <h2 className="text-3xl md:text-4xl font-bold">
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Our Dedicated{" "}
+          Meet the Team
         </span>
-        Crew
       </h2>
 
       <p className="mt-4 mb-10 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
+        Our lighting specialists and project managers ensure every installation delivers performance and premium results.
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">
@@ -129,7 +127,7 @@ export const Team = () => {
           ({ imageUrl, name, position, socialNetworks }: TeamProps) => (
             <Card
               key={name}
-              className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center"
+              className="bg-secondary/40 relative mt-8 flex flex-col justify-center items-center border-border"
             >
               <CardHeader className="mt-8 flex justify-center items-center pb-2">
                 <img
@@ -144,7 +142,7 @@ export const Team = () => {
               </CardHeader>
 
               <CardContent className="text-center pb-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>{`${name} leads lighting strategy and ensures seamless execution for our clients.`}</p>
               </CardContent>
 
               <CardFooter>

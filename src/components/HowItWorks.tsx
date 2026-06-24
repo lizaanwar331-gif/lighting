@@ -1,36 +1,32 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { MedalIcon, MapIcon, PlaneIcon, GiftIcon } from "../components/Icons";
 
-interface FeatureProps {
+interface ProcessStepProps {
   icon: JSX.Element;
   title: string;
   description: string;
 }
 
-const features: FeatureProps[] = [
-  {
-    icon: <MedalIcon />,
-    title: "Accessibility",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
-  },
+const processSteps: ProcessStepProps[] = [
   {
     icon: <MapIcon />,
-    title: "Community",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+    title: "Consultation",
+    description: "We review your space, goals and application to specify the ideal LED solution.",
+  },
+  {
+    icon: <MedalIcon />,
+    title: "Design",
+    description: "Our team creates lighting plans and custom fixture options for every project.",
   },
   {
     icon: <PlaneIcon />,
-    title: "Scalability",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+    title: "Delivery",
+    description: "Fast fulfillment with quality packaging and reliable logistics for every order.",
   },
   {
     icon: <GiftIcon />,
-    title: "Gamification",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+    title: "Support",
+    description: "Ongoing service, technical support and warranty assistance for peace of mind.",
   },
 ];
 
@@ -41,22 +37,17 @@ export const HowItWorks = () => {
       className="container text-center py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold ">
-        How It{" "}
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Works{" "}
-        </span>
-        Step-by-Step Guide
+        The Lighting Process
       </h2>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
+        From design and specification through delivery and support, our team simplifies every step for residential and commercial projects.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {features.map(({ icon, title, description }: FeatureProps) => (
+        {processSteps.map(({ icon, title, description }: ProcessStepProps) => (
           <Card
             key={title}
-            className="bg-muted/50"
+            className="bg-secondary/40 border-border"
           >
             <CardHeader>
               <CardTitle className="grid gap-4 place-items-center">

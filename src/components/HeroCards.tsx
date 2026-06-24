@@ -20,132 +20,70 @@ export const HeroCards = () => {
       <Card className="absolute w-[340px] -top-[15px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <Avatar>
-            <AvatarImage
-              alt=""
-              src="https://github.com/shadcn.png"
-            />
-            <AvatarFallback>SH</AvatarFallback>
+            <AvatarImage alt="" src="/icon.png" />
+            <AvatarFallback>CV</AvatarFallback>
           </Avatar>
 
           <div className="flex flex-col">
-            <CardTitle className="text-lg">John Doe React</CardTitle>
-            <CardDescription>@john_doe</CardDescription>
+            <CardTitle className="text-lg">Maria Gonzales</CardTitle>
+            <CardDescription>Interior Designer</CardDescription>
           </div>
         </CardHeader>
 
-        <CardContent>This landing page is awesome!</CardContent>
+        <CardContent>
+          "CVeez transformed a villa project with warm, efficient LEDs — the
+          result exceeded expectations."
+        </CardContent>
       </Card>
 
-      {/* Team */}
+      {/* Project / Product Card */}
       <Card className="absolute right-[20px] top-4 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <img
-            src="https://i.pravatar.cc/150?img=58"
-            alt="user avatar"
-            className="absolute grayscale-[0%] -top-12 rounded-full w-24 h-24 aspect-square object-cover"
-          />
-          <CardTitle className="text-center">Leo Miranda</CardTitle>
-          <CardDescription className="font-normal text-primary">
-            Frontend Developer
-          </CardDescription>
+            src="/icon.png"
+              alt="lighting logo"
+              className="absolute grayscale-[0%] -top-12 rounded-full w-24 h-24 aspect-square object-cover"
+            />
+            <CardTitle className="text-center">Lighting</CardTitle>
         </CardHeader>
 
         <CardContent className="text-center pb-2">
-          <p>
-            I really enjoy transforming ideas into functional software that
-            exceeds expectations
-          </p>
+          <p>Energy-efficient products, smart controls, and commercial-grade
+          reliability.</p>
         </CardContent>
-
-        <CardFooter>
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="https://github.com/leoMirandaa"
-              target="_blank"
-              className={buttonVariants({
-                variant: "ghost",
-                size: "sm",
-              })}
-            >
-              <span className="sr-only">Github icon</span>
-              <GitHubLogoIcon className="w-5 h-5" />
-            </a>
-            <a
-              rel="noreferrer noopener"
-              href="https://twitter.com/leo_mirand4"
-              target="_blank"
-              className={buttonVariants({
-                variant: "ghost",
-                size: "sm",
-              })}
-            >
-              <span className="sr-only">X icon</span>
-              <svg
-                role="img"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                className="fill-foreground w-5 h-5"
-              >
-                <title>X</title>
-                <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
-              </svg>
-            </a>
-
-            <a
-              rel="noreferrer noopener"
-              href="https://www.linkedin.com/in/leopoldo-miranda/"
-              target="_blank"
-              className={buttonVariants({
-                variant: "ghost",
-                size: "sm",
-              })}
-            >
-              <span className="sr-only">Linkedin icon</span>
-              <Linkedin size="20" />
-            </a>
-          </div>
-        </CardFooter>
       </Card>
 
-      {/* Pricing */}
+      {/* Product Highlight */}
       <Card className="absolute top-[150px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader>
           <CardTitle className="flex item-center justify-between">
-            Free
-            <Badge
-              variant="secondary"
-              className="text-sm text-primary"
-            >
-              Most popular
+            LED Panels
+            <Badge variant="secondary" className="text-sm text-primary">
+              Bestseller
             </Badge>
           </CardTitle>
           <div>
-            <span className="text-3xl font-bold">$0</span>
-            <span className="text-muted-foreground"> /month</span>
+            <span className="text-3xl font-bold">High CRI</span>
+            <span className="text-muted-foreground"> • 4000K</span>
           </div>
 
           <CardDescription>
-            Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.
+            Slim, efficient panels ideal for offices and retail spaces.
           </CardDescription>
         </CardHeader>
 
         <CardContent>
-          <Button className="w-full">Start Free Trial</Button>
+          <Button className="w-full">View Range</Button>
         </CardContent>
 
         <hr className="w-4/5 m-auto mb-4" />
 
         <CardFooter className="flex">
           <div className="space-y-4">
-            {["4 Team member", "4 GB Storage", "Upto 6 pages"].map(
+            {['Energy Efficient', 'Long Lifespan', 'Commercial Grade'].map(
               (benefit: string) => (
-                <span
-                  key={benefit}
-                  className="flex"
-                >
-                  <Check className="text-green-500" />{" "}
-                  <h3 className="ml-2">{benefit}</h3>
+                <span key={benefit} className="flex">
+                  <Check className="text-green-500" /> <h3 className="ml-2">{benefit}</h3>
                 </span>
               )
             )}
@@ -160,10 +98,10 @@ export const HeroCards = () => {
             <LightBulbIcon />
           </div>
           <div>
-            <CardTitle>Light & dark mode</CardTitle>
+            <CardTitle>Smart Lighting Control</CardTitle>
             <CardDescription className="text-md mt-2">
-              Lorem ipsum dolor sit amet consect adipisicing elit. Consectetur
-              natusm.
+              Integrations with popular smart home and building management
+              systems for centralized control and scheduling.
             </CardDescription>
           </div>
         </CardHeader>
